@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/about.css') }}">
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img class="logo" src="{{ url_for('static', filename='images/logo (1).png') }}" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+  <!-- paragraph page starts -->
+  <div class="container-1 flex">
+    <div class="left-side">
+      <img class="paraimg" src="{{ url_for('static', filename='images/p.jpg') }}" alt="Image">
+    </div>
+    <div class="right-side">
+      <h1>Why TradeGod ?</h1>
+      <p>In the past few decades, we have seen significant advancements in the usage of social media platforms which have fundamentally altered customer behavior and patterns. This has all been possible due to the current wave of digitalization and can be marked as the beginning of the digital era.</p>
+    </div>
+  </div>
+
+  <div class="secondpara">
+    <h2>How TradeGod works ?</h2>
+    <p>TradeGod operates by harnessing the power of advanced machine learning algorithms and extensive historical market data to provide accurate stock predictions. When a user inputs the name of a company, our system processes this information using sophisticated data analysis techniques to evaluate current market trends, historical performance, and a range of financial indicators. The model then generates a prediction indicating the likelihood of a stock's uptrend or downtrend. </p>
+  </div>
+  <!-- paragraph page ends -->
+
+  <!-- contact page -->
+  <div class="contact flex">
+    <div class="social-part">
+      <h3>Contact Us</h3>
+      <p class="num">Phone Number: +977-980000000</p>
+      <p class="email">Email: tradegod@gmail.com</p>
+      <div class="icons">
+        <i class="bi bi-facebook" style="color: blue;"></i>
+        <i class="bi bi-youtube" style="color: red;"></i>
+        <i class="bi bi-github" style="color: green;"></i>
+        <i class="bi bi-instagram" style="color: red;"></i>
+      </div>
+    </div>
+    <div class="form-part">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name is Required.">
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Your Email Address">
+      </div>
+      <div class="mb-3">
+        <textarea name="Message" id="formGroupExampleInput2" class="form-control" rows="4" cols="0" placeholder="Type your Message....."></textarea>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="sub">Submit</button>
+  <!-- contact ends -->
+
+  <!-- footer starts -->
+  <footer>
+    <div class="container-1">
+      <div class="flex wrap">
+        <div class="footer-box">
+          <img class="logo-1" src="{{ url_for('static', filename='images/logo (1).png') }}" alt="Logo">
+          <p>Millions of people of all ages and from around the world are improving their lives with us</p>
+        </div>
+        <div class="footer-box-1">
+          <h4 class="foot1">Reach Out</h4>
+          <ul>
+            <li><i class="bi bi-geo-alt-fill"></i><a href="">Maitidevi Kathmandu</a></li>
+            <li><i class="bi bi-envelope"></i><a href="">tradegod@gmail.com</a></li>
+            <li><i class="bi bi-telephone"></i><a href="">9800000000</a></li>
+          </ul>
+        </div>
+        <div class="footer-box-2">
+          <h4 class="links">Useful Link</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">Copyright © 2020 www.tradegod.com</p>
+  </footer>
+  <!-- footer ends -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
